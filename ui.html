@@ -1,0 +1,272 @@
+<head>
+<style>
+html *
+{
+   font-size: 1em !important;
+   color: #000000 !important;
+   font-family: Arial !important;
+}
+
+.button {
+  text-align: left;
+  height: 50px;
+  width: 100%;
+}
+
+.button:hover {
+      background-color:#f000cc;
+      transition: 0.3s;
+      color: white !important;
+  }
+
+#issuecategory {
+  display: block;
+}
+
+#mostcommon, #perception, #operate, #understand, #robust, #backbut {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+<div id="issuecategory">
+
+  <button type="button" class="button" onclick="showMostCommon()">Most Common</button>
+  <button type="button" class="button" onclick="showPerception()">Perceivable</button>
+  <button type="button" class="button" onclick="showOperate()">Operable</button>
+  <button type="button" class="button" onclick="showUnderstand()">Understandable</button>
+  <button type="button" class="button" onclick="showRobust()">Robust</button>
+
+</div>
+
+<div id="mostcommon">
+
+  <button type="button" class="button">Issue 1</button>
+  <button type="button" class="button">Issue 2</button>
+  <button type="button" class="button">Issue 3</button>
+  <button type="button" class="button">Issue 4</button>
+  <button type="button" class="button">Issue 5</button>
+  <button type="button" class="button">Issue 6</button>
+
+</div>
+
+<div id="perception">
+
+  <button type="button" class="button">1.1.1 Non-text Content</button>
+  <button type="button" class="button">1.2.1 Audio-only and Video-only (Prerecorded)</button>
+  <button type="button" class="button">1.2.2 Captions (Prerecorded)</button>
+  <button type="button" class="button">1.2.3 Audio Description or Media Alternative (Prerecorded)</button>
+  <button type="button" class="button">1.2.4 Captions (Live)</button>
+  <button type="button" class="button">1.2.5 Audio Description (Prerecorded)</button>
+  <button type="button" class="button">1.2.6 Sign Language (Prerecorded)</button>
+  <button type="button" class="button">1.2.7 Extended Audio Description (Prerecorded)</button>
+  <button type="button" class="button">1.2.8 Media Alternative (Prerecorded)</button>
+  <button type="button" class="button">1.2.9 Audio-only (Live)</button>
+  <button type="button" class="button">1.3.1 Info and Relationships</button>
+  <button type="button" class="button">1.3.2 Meaningful Sequence</button>
+  <button type="button" class="button">1.3.3 Sensory Characteristics</button>
+  <button type="button" class="button">1.3.4 Orientation</button>
+  <button type="button" class="button">1.3.5 Identify Input Purpose</button>
+  <button type="button" class="button">1.3.6 Identify Purpose</button>
+  <button type="button" class="button">1.4.1 Use of Color</button>
+  <button type="button" class="button">1.4.2 Audio Control</button>
+  <button type="button" class="button">1.4.3 Contrast (Minimum)</button>
+  <button type="button" class="button">1.4.4 Resize text</button>
+  <button type="button" class="button">1.4.5 Images of Text</button>
+  <button type="button" class="button">1.4.6 Contrast (Enhanced)</button>
+  <button type="button" class="button">1.4.7 Low or No Background Audio</button>
+  <button type="button" class="button">1.4.8 Visual Presentation</button>
+  <button type="button" class="button">1.4.9 Images of Text (No Exception)</button>
+  <button type="button" class="button">1.4.10 Reflow</button>
+  <button type="button" class="button">1.4.11 Non-text Contrast</button>
+  <button type="button" class="button">1.4.12 Text Spacing</button>
+  <button type="button" class="button">1.4.13 Content on Hover or Focus</button>
+
+</div>
+
+<div id="operate">
+
+  <button type="button" class="button" onclick="issueClicked('2.1.1')">2.1.1 Keyboard</button>
+  <button type="button" class="button">2.1.2 No Keyboard Trap</button>
+  <button type="button" class="button">2.1.3 Keyboard (No Exception)</button>
+  <button type="button" class="button">2.1.4 Character Key Shortcuts</button>
+  <button type="button" class="button">2.2.1 Timing Adjustable</button>
+  <button type="button" class="button">2.2.2 Pause, Stop, Hide</button>
+  <button type="button" class="button">2.2.3 No Timing</button>
+  <button type="button" class="button">2.2.4 Interruptions</button>
+  <button type="button" class="button">2.2.5 Re-authenticating</button>
+  <button type="button" class="button">2.2.6 Timeouts</button>
+  <button type="button" class="button">2.3.1 Three Flashes or Below Threshold</button>
+  <button type="button" class="button">2.3.2 Three Flashes</button>
+  <button type="button" class="button">2.3.3 Animation from Interactions</button>
+  <button type="button" class="button">2.4.1 Bypass Blocks</button>
+  <button type="button" class="button">2.4.2 Page Titled</button>
+  <button type="button" class="button">2.4.3 Focus Order</button>
+  <button type="button" class="button">2.4.4 Link Purpose (In Context)</button>
+  <button type="button" class="button">2.4.5 Multiple Ways</button>
+  <button type="button" class="button">2.4.6 Headings and Labels</button>
+  <button type="button" class="button">2.4.7 Focus Visible</button>
+  <button type="button" class="button">2.4.8 Location</button>
+  <button type="button" class="button">2.4.9 Link Purpose (Link Only)</button>
+  <button type="button" class="button">2.4.10 Section Headings</button>
+  <button type="button" class="button">2.5.1 Pointer Gestures</button>
+  <button type="button" class="button">2.5.2 Pointer Cancellation</button>
+  <button type="button" class="button">2.5.3 Label in Name</button>
+  <button type="button" class="button">2.5.4 Motion Actuation</button>
+  <button type="button" class="button">2.5.5 Target Size</button>
+  <button type="button" class="button">2.5.6 Concurrent Input Mechanisms</button>
+
+</div>
+
+<div id="understand">
+
+  <button type="button" class="button">3.1.1 Language of Page</button>
+  <button type="button" class="button">3.1.2 Language of Parts</button>
+  <button type="button" class="button">3.1.3 Unusual Words</button>
+  <button type="button" class="button">3.1.4 Abbreviations</button>
+  <button type="button" class="button">3.1.5 Reading Level</button>
+  <button type="button" class="button">3.1.6 Pronunciation</button>
+  <button type="button" class="button">3.2.1 On Focus</button>
+  <button type="button" class="button">3.2.2 On Input</button>
+  <button type="button" class="button">3.2.3 Consistent Navigation</button>
+  <button type="button" class="button">3.2.4 Consistent Identification</button>
+  <button type="button" class="button">3.2.5 Change on Request</button>
+  <button type="button" class="button">3.3.1 Error Identification</button>
+  <button type="button" class="button">3.3.2 Labels or Instructions</button>
+  <button type="button" class="button">3.3.3 Error Suggestion</button>
+  <button type="button" class="button">3.3.4 Error Prevention (Legal, Financial, Data)</button>
+  <button type="button" class="button">3.3.5 Help</button>
+  <button type="button" class="button">3.3.6 Error Prevention (All)</button>
+
+</div>
+
+<div id="robust">
+
+  <button type="button" class="button">4.1.1 Parsing</button>
+  <button type="button" class="button">4.1.2 Name, Role, Value</button>
+  <button type="button" class="button">4.1.3 Status Messages</button>
+
+</div>
+
+<button id="backbut" type="button" class="button" onclick="showMenu()">BACK</button>
+
+
+
+<script>
+  function showMostCommon() {
+    document.getElementById('issuecategory').style.display='none';
+    document.getElementById('mostcommon').style.display='block';
+    document.getElementById('backbut').style.display='block';
+  }
+
+  function showPerception() {
+    document.getElementById('issuecategory').style.display='none';
+    document.getElementById('perception').style.display='block';
+    document.getElementById('backbut').style.display='block';
+
+  }
+
+  function showOperate() {
+    document.getElementById('issuecategory').style.display='none';
+    document.getElementById('operate').style.display='block';
+    document.getElementById('backbut').style.display='block';
+
+  }
+
+  function showUnderstand() {
+    document.getElementById('issuecategory').style.display='none';
+    document.getElementById('understand').style.display='block';
+    document.getElementById('backbut').style.display='block';
+
+  }
+
+  function showRobust() {
+    document.getElementById('issuecategory').style.display='none';
+    document.getElementById('robust').style.display='block';
+    document.getElementById('backbut').style.display='block';
+
+  }
+
+  function showMenu() {
+    document.getElementById('issuecategory').style.display='block';
+    document.getElementById('robust').style.display='none';
+    document.getElementById('understand').style.display='none';
+    document.getElementById('operate').style.display='none';
+    document.getElementById('perception').style.display='none';
+    document.getElementById('mostcommon').style.display='none';
+    document.getElementById('backbut').style.display='none';
+  }
+
+  function issueClicked(iss_num) {
+    const wcagGuidelines = {
+  "1.1.1": "https://www.w3.org/TR/WCAG21/#non-text-content",
+  "1.2.1": "Audio-only and Video-only (Prerecorded)",
+  "1.2.2": "Captions (Prerecorded)",
+  "1.2.3": "Audio Description or Media Alternative (Prerecorded)",
+  "1.3.1": "Info and Relationships",
+  "1.3.2": "Meaningful Sequence",
+  "1.3.3": "Sensory Characteristics",
+  "1.4.1": "Use of Color",
+  "1.4.2": "Audio Control",
+  "1.4.3": "Contrast (Minimum)",
+  "1.4.4": "Resize Text",
+  "1.4.5": "Images of Text",
+  "1.4.6": "Contrast (Enhanced)",
+  "1.4.7": "Low or No Background Audio",
+  "1.4.8": "Visual Presentation",
+  "1.4.9": "Images of Text (No Exception)",
+  "1.4.10": "Reflow",
+  "1.4.11": "Non-text Contrast",
+  "1.4.12": "Text Spacing",
+  "1.4.13": "Content on Hover or Focus",
+  "2.1.1": "https://www.w3.org/TR/WCAG21/#keyboard",
+  "2.1.2": "No Keyboard Trap",
+  "2.1.3": "Keyboard (No Exception)",
+  "2.2.1": "Timing Adjustable",
+  "2.2.2": "Pause, Stop, Hide",
+  "2.3.1": "Three Flashes or Below Threshold",
+  "2.4.1": "Bypass Blocks",
+  "2.4.2": "Page Titled",
+  "2.4.3": "Focus Order",
+  "2.4.4": "Link Purpose (In Context)",
+  "2.4.5": "Multiple Ways",
+  "2.4.6": "Headings and Labels",
+  "2.4.7": "Focus Visible",
+  "2.4.8": "Location",
+  "2.4.9": "Link Purpose (Link Only)",
+  "2.4.10": "Section Headings",
+  "2.5.1": "Pointer Gestures",
+  "2.5.2": "Pointer Cancellation",
+  "2.5.3": "Label in Name",
+  "2.5.4": "Motion Actuation",
+  "2.5.5": "Target Size",
+  "3.1.1": "Language of Page",
+  "3.1.2": "Language of Parts",
+  "3.1.3": "Unusual Words",
+  "3.1.4": "Abbreviations",
+  "3.1.5": "Reading Level",
+  "3.1.6": "Pronunciation",
+  "3.2.1": "On Focus",
+  "3.2.2": "On Input",
+  "3.2.3": "Consistent Navigation",
+  "3.2.4": "Consistent Identification",
+  "3.2.5": "Change on Request",
+  "3.3.1": "Error Identification",
+  "3.3.2": "Labels or Instructions",
+  "3.3.3": "Error Suggestion",
+  "3.3.4": "Error Prevention (Legal, Financial, Data)",
+  "3.3.5": "Help",
+  "3.3.6": "Error Prevention (All)",
+  "4.1.1": "Parsing",
+  "4.1.2": "Name, Role, Value",
+  "4.1.3": "Status Messages",
+};
+  console.log("HELLO THERE");
+  const url = wcagGuidelines[iss_num];
+  parent.postMessage({pluginMessage: {type: "createHyperlink", url: url}}, "*");
+  }
+</script>
+
+</body>
+
