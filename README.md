@@ -2,7 +2,6 @@
 
 **Plugin Name:** TestingHack  
 **Plugin ID:** 1264568265387232935  
-**Author:** Aya Tarist  
 **Version:** 1.0.0  
 
 ---
