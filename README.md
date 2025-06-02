@@ -1,3 +1,18 @@
+# TestingHack Figma Plugin
+
+**Plugin Name:** TestingHack  
+**Plugin ID:** 1264568265387232935  
+**Author:** Aya Tarist  
+**Version:** 1.0.0  
+
+---
+
+## 📖 Overview
+
+TestingHack is a Figma plugin built with TypeScript that provides a simple, WCAG-focused interface for quickly navigating and inspecting common accessibility issues. It displays a menu of categories (e.g., “Perceivable,” “Operable,” “Understandable,” “Robust”) and, within each category, lists individual WCAG checkpoints as clickable buttons. When a user clicks a guideline button, the plugin emits a message containing the corresponding WCAG URL so your plugin code (in `code.js`) can create a hyperlink or take further action.
+
+---
+
 Below are the steps to get your plugin running. You can also find instructions at:
 
   https://www.figma.com/plugin-docs/plugin-quickstart-guide/
